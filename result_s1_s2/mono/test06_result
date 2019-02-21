@@ -1,0 +1,66 @@
+--------------------------------------------------------------------
+2019.2.15.
+
+ltl p1 {[] !(task_state[2] == Running && task_state[1] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 107298, errors: 0
+  7916424 states, stored
+  8644096 states, matched
+ 16560520 transitions (= stored+matched)
+  3866754 atomic steps
+hash conflicts:   1172533 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1811.926	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1510.736	actual memory usage for states (compression: 83.38%)
+         	state-vector as stored = 172 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+    2.003	other (proc and chan stacks)
+ 1694.296	total actual memory usage
+
+pan: elapsed time 36.4 seconds
+----------------------------------------------------------------------
+ltl p2 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 233, errors: 1
+      614 states, stored (616 visited)
+      339 states, matched
+      955 transitions (= visited+matched)
+      141 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.141	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.329	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.827	total actual memory usage
+
+
+
+pan: elapsed time 0.01 seconds
+------------------------------------------------
+counterexample scenario: main starts alarm and alarm activate task1, but before processing the activation,
+  main shutdownOS. OS processes the task activation and then shutdownOS. Therefore, the system stops before
+the task1 terminates normally.  See p2_result for details
+

@@ -1,0 +1,94 @@
+ltl p2 { [] !((task_state[2] == Running ) && (task_state[1] == Running))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 236 byte, depth reached 335, errors: 0
+      860 states, stored
+     1350 states, matched
+     2210 transitions (= stored+matched)
+      157 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.217	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.331	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.827	total actual memory usage
+
+---------------------------------------------------------------------------
+ltl p1 { [] (task_state[1] == Running ->  <> (task_state[2] == Running)) }
+
+Scenario: task0 activates task1 --> task1 raises interrupt --> ISR sets the alarm and wait till --> alarm activates task2
+
+
+--------------------------------------------------------------------
+2019.2.15.
+
+ltl p1 {[] !(task_state[2] == Running && task_state[1] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 236 byte, depth reached 240, errors: 0
+      948 states, stored
+      791 states, matched
+     1739 transitions (= stored+matched)
+       81 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.239	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.427	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.925	total actual memory usage
+
+pan: elapsed time 0 seconds
+--------------------------------------------------------
+ltl p2 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended))}
+
+-- same problem with EEtest04
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 244 byte, depth reached 276, errors: 1
+       77 states, stored (129 visited)
+       62 states, matched
+      191 transitions (= visited+matched)
+       49 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.020	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.231	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.730	total actual memory usage
+
+
+
+pan: elapsed time 0 seconds
+----------------------------------------------
+

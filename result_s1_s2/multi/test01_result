@@ -1,0 +1,106 @@
+------------------------------------------
+ltl p1 {[] !(task_state[0] == Running && task_state[1] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 801151, errors: 0
+  4802217 states, stored
+     2196 states, matched
+  4804413 transitions (= stored+matched)
+      447 atomic steps
+hash conflicts:     44125 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1099.140	equivalent memory usage for states (stored*(State-vector + overhead))
+  954.258	actual memory usage for states (compression: 86.82%)
+         	state-vector as stored = 180 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+   22.090	other (proc and chan stacks)
+ 1158.359	total actual memory usage
+
+-------------------------------------------------------------
+ltl p2 {[] !(task_state[0] == Running && task_state[2] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 801151, errors: 0
+  4802217 states, stored
+     2196 states, matched
+  4804413 transitions (= stored+matched)
+      447 atomic steps
+hash conflicts:     44125 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1099.140	equivalent memory usage for states (stored*(State-vector + overhead))
+  954.258	actual memory usage for states (compression: 86.82%)
+         	state-vector as stored = 180 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+   22.090	other (proc and chan stacks)
+ 1158.359	total actual memory usage
+----------------------------------------------------------
+ltl p3 {[] !(task_state[1] == Running && task_state[2] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 801151, errors: 0
+  4802217 states, stored
+     2196 states, matched
+  4804413 transitions (= stored+matched)
+      447 atomic steps
+hash conflicts:     44125 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1099.140	equivalent memory usage for states (stored*(State-vector + overhead))
+  954.258	actual memory usage for states (compression: 86.82%)
+         	state-vector as stored = 180 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+   22.090	other (proc and chan stacks)
+ 1158.359	total actual memory usage
+
+pan: elapsed time 5.79 seconds
+----------------------------------------------------------
+
+ltl p4 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended)) }
+
+State-vector 212 byte, depth reached 801151, errors: 0
+  4802747 states, stored (4.80522e+06 visited)
+     5696 states, matched
+  4810913 transitions (= visited+matched)
+      867 atomic steps
+hash conflicts:     44035 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 1099.262	equivalent memory usage for states (stored*(State-vector + overhead))
+  990.362	actual memory usage for states (compression: 90.09%)
+         	state-vector as stored = 188 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+   22.733	other (proc and chan stacks)
+ 1194.785	total actual memory usage
+
+pan: elapsed time 6.1 seconds
+----------------------------------------------

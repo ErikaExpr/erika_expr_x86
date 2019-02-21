@@ -1,0 +1,68 @@
+-----------------------------------------
+ltl p2 {[] !(task_state[1] == Running && task_state[2] == Running)}
+
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 244 byte, depth reached 1373, errors: 0
+ 60479877 states, stored
+ 45636080 states, matched
+1.0611596e+08 transitions (= stored+matched)
+ 19786837 atomic steps
+hash conflicts:  31971872 (resolved)
+
+Stats on memory usage (in Megabytes):
+15688.445	equivalent memory usage for states (stored*(State-vector + overhead))
+13505.172	actual memory usage for states (compression: 86.08%)
+         	state-vector as stored = 206 byte + 28 byte overhead
+  512.000	memory used for hash table (-w26)
+    5.341	memory used for DFS stack (-m99999)
+   12.571	memory lost to fragmentation
+14009.989	total actual memory usage
+
+pan: elapsed time 148 seconds
+------------------------------
+
+ltl p2 {[] (task_state[2] == Running -> <> (task_state[2] == Suspended))}
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 244 byte, depth reached 1043, errors: 1
+     9620 states, stored (30980 visited)
+    27733 states, matched
+    58713 transitions (= visited+matched)
+     3706 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    2.495	equivalent memory usage for states (stored*(State-vector + overhead))
+    2.272	actual memory usage for states (compression: 91.04%)
+         	state-vector as stored = 220 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  130.780	total actual memory usage
+
+
+
+pan: elapsed time 0.11 seconds
+pan: rate 281636.36 states/second
+--------------------------------------
+ltl p2 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended))}
+
+
+
+

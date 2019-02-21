@@ -1,0 +1,228 @@
+
+ltl p2 { [] !((task_state[2] == Running ) && (task_state[1] == Running))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 228 byte, depth reached 99999998, errors: 0
+ 44621481 states, stored
+  6171875 states, matched
+ 50793356 transitions (= stored+matched)
+ 17313809 atomic steps
+hash conflicts:  12735169 (resolved)
+
+Stats on memory usage (in Megabytes):
+10893.916	equivalent memory usage for states (stored*(State-vector + overhead))
+ 9779.544	actual memory usage for states (compression: 89.77%)
+         	state-vector as stored = 202 byte + 28 byte overhead
+  512.000	memory used for hash table (-w26)
+ 5340.576	memory used for DFS stack (-m99999999)
+  621.202	other (proc and chan stacks)
+    4.597	memory lost to fragmentation
+16257.920	total actual memory usage
+
+--------------------
+Due to the alarm that infinitely activates task2, it is infeasible to verify.
+
+Verification successful after limiting the number of alarm firing to 20
+---------------------
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 228 byte, depth reached 2005, errors: 0
+ 15833802 states, stored
+  6932204 states, matched
+ 22766006 transitions (= stored+matched)
+  3183349 atomic steps
+hash conflicts:   2700759 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 3865.674	equivalent memory usage for states (stored*(State-vector + overhead))
+ 3383.588	actual memory usage for states (compression: 87.53%)
+         	state-vector as stored = 196 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+    1.591	memory lost to fragmentation
+ 3510.565	total actual memory usage
+
+pan: elapsed time 55.3 seconds
+-----------------------------------------------------------------------
+ltl p3 { [] ((task_state[1] == Running) -> <> (task_state[1] == Suspended))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 204 byte, depth reached 677, errors: 1
+      209 states, stored (649 visited)
+      503 states, matched
+     1152 transitions (= visited+matched)
+      223 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.046	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.232	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.730	total actual memory usage
+
+
+
+pan: elapsed time 0 seconds
+-----------------
+It is false because: task1 is waiting for isr_fired becomes 10, but no task activates the isr
+--------------------------------------------------------------------------------
+ltl p4 { [] ((task_state[2] == Running) -> <> (task_state[2] == Suspended))}
+
+same as p2
+-----------------------------------------------------------------------
+
+--------------------------------------------------------------------
+2019.2.15.
+
+ltl p1 {[] !(task_state[1] == Running && task_state[2] == Running) }
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 353, errors: 0
+      872 states, stored
+      597 states, matched
+     1469 transitions (= stored+matched)
+      116 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.200	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.331	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  128.827	total actual memory usage
+
+pan: elapsed time 0 seconds
+---------------------------------------------------------
+ltl p2 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 9999998, errors: 0
+ 36408878 states, stored (3.29287e+08 visited)
+6.0821846e+08 states, matched
+9.3750517e+08 transitions (= visited+matched)
+1.0533387e+08 atomic steps
+hash conflicts:  58700699 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 8333.331	equivalent memory usage for states (stored*(State-vector + overhead))
+ 7815.938	actual memory usage for states (compression: 93.79%)
+         	state-vector as stored = 197 byte + 28 byte overhead
+ 2048.000	memory used for hash table (-w28)
+  534.058	memory used for DFS stack (-m9999999)
+   72.635	other (proc and chan stacks)
+    5.236	memory lost to fragmentation
+10475.866	total actual memory usage
+
+
+
+pan: elapsed time 954 seconds    (interrupted in the middle)
+-----------------------------------------------
+ltl p2 {[] (task_state[2] == Running -> <> (task_state[2] == Suspended))}
+
+** abstracted to run the alarm only while isr1_fired < 1001
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 30131, errors: 0
+   139873 states, stored
+   224136 states, matched
+   364009 transitions (= stored+matched)
+    34852 atomic steps
+hash conflicts:       550 (resolved)
+
+Stats on memory usage (in Megabytes):
+   32.014	equivalent memory usage for states (stored*(State-vector + overhead))
+   28.046	actual memory usage for states (compression: 87.61%)
+         	state-vector as stored = 182 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+   53.406	memory used for DFS stack (-m999999)
+  209.629	total actual memory usage
+
+pan: elapsed time 0.46 seconds
+-----------------------------------------------------------
+However, this abstraction doesn't work for task1 -- always find an error 
+due to the condition "(isr1_fired % 10)". Even though isr_fired%10 becomes 0, if
+task1 does not check it exactly when it becomes 0, it will continue the infinite loop
+and cannot break out of the loop for termination.
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 212 byte, depth reached 2981, errors: 1
+    13013 states, stored (127721 visited)
+   186577 states, matched
+   314298 transitions (= visited+matched)
+    69288 atomic steps
+hash conflicts:       189 (resolved)
+
+Stats on memory usage (in Megabytes):
+    2.978	equivalent memory usage for states (stored*(State-vector + overhead))
+    2.752	actual memory usage for states (compression: 92.40%)
+         	state-vector as stored = 194 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  131.269	total actual memory usage
+
+
+
+pan: elapsed time 0.39 seconds
+pan: rate 327489.74 states/second
+------------------------------------------
+

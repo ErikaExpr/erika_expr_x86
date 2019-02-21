@@ -1,0 +1,518 @@
+
+Counterexample:
+
+State 4 file <built-in-additions> line 78 thread 0
+----------------------------------------------------
+  __CPROVER_pipe_count=__CPROVER_pipe_count#1 (?)
+
+State 5 file <built-in-additions> line 21 thread 0
+----------------------------------------------------
+  __CPROVER_thread_id=__CPROVER_thread_id!0#1 (?)
+
+State 7 file <built-in-additions> line 22 thread 0
+----------------------------------------------------
+  __CPROVER_threads_exited={ [1]=FALSE, [2]=FALSE, [3]=FALSE } (?)
+
+State 9 file <built-in-additions> line 23 thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 11 file <built-in-additions> line 30 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=__CPROVER_deallocated#1 (?)
+
+State 13 file <built-in-additions> line 31 thread 0
+----------------------------------------------------
+  __CPROVER_dead_object=__CPROVER_dead_object#1 (?)
+
+State 15 file <built-in-additions> line 32 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=__CPROVER_malloc_object#1 (?)
+
+State 17 file <built-in-additions> line 33 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=__CPROVER_malloc_size#1 (?)
+
+State 19 file <built-in-additions> line 34 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_is_new_array=__CPROVER_malloc_is_new_array#1 (?)
+
+State 21 file <built-in-additions> line 35 thread 0
+----------------------------------------------------
+  __CPROVER_memory_leak=__CPROVER_memory_leak#1 (?)
+
+State 23 file code.c line 22 thread 0
+----------------------------------------------------
+  EE_assertions={ 0, 0, 0, 0, 0 } ({ 0000000000000000, 0000000000000000, 0000000000000000, 0000000000000000, 0000000000000000 })
+
+State 25 file lib_manual.h line 9 thread 0
+----------------------------------------------------
+  enable_interrupt=enable_interrupt#1 (?)
+
+State 27 file lib_manual.h line 10 thread 0
+----------------------------------------------------
+  shutdown=shutdown#1 (?)
+
+State 29 file code.c line 31 thread 0
+----------------------------------------------------
+  result=result#1 (?)
+
+State 31 file code.c line 34 thread 0
+----------------------------------------------------
+  task1_fired=0 (00000000000000000000000000000000)
+
+State 33 file code.c line 35 thread 0
+----------------------------------------------------
+  task1_ended=0 (00000000000000000000000000000000)
+
+State 35 file code.c line 36 thread 0
+----------------------------------------------------
+  isr1_fired=0 (00000000000000000000000000000000)
+
+State 37 file code.c line 37 thread 0
+----------------------------------------------------
+  counter=counter#1 (?)
+
+State 38 file <built-in-additions> line 57 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=__CPROVER_rounding_mode!0#1 (?)
+
+State 42 file code.c line 88 function main thread 0
+----------------------------------------------------
+  task={ 0, 0 } ({ 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000 })
+
+State 43 file code.c line 89 function main thread 0
+----------------------------------------------------
+  thr_id=thr_id!0@1#1 (?)
+
+State 44 file code.c line 90 function main thread 0
+----------------------------------------------------
+  status=status!0@1#1 (?)
+
+State 45 file code.c line 91 function main thread 0
+----------------------------------------------------
+  a=a!0@1#1 (?)
+
+State 46 file code.c line 91 function main thread 0
+----------------------------------------------------
+  a=a!0@1#2 (?)
+
+State 47 file code.c line 92 function main thread 0
+----------------------------------------------------
+  main$$1$$result=result!0@1#1 (?)
+
+State 48 file code.c line 92 function main thread 0
+----------------------------------------------------
+  main$$1$$result=result!0@1#2 (?)
+Starting ERIKA
+
+
+State 52 file code.c line 99 function main thread 0
+----------------------------------------------------
+  thread=thread!0@1#1 (?)
+
+State 53 file code.c line 99 function main thread 0
+----------------------------------------------------
+  attr=attr!0@1#1 (?)
+
+State 54 file code.c line 99 function main thread 0
+----------------------------------------------------
+  start_routine=start_routine!0@1#1 (?)
+
+State 55 file code.c line 99 function main thread 0
+----------------------------------------------------
+  arg=arg!0@1#1 (?)
+
+State 56 file <builtin-library>-pthread_create line 33 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=this_thread_id!0@1#1 (?)
+
+State 58 file <builtin-library>-pthread_create line 35 function pthread_create thread 0
+----------------------------------------------------
+  __CPROVER_next_thread_id=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 59 file <builtin-library>-pthread_create line 35 function pthread_create thread 0
+----------------------------------------------------
+  this_thread_id=this_thread_id!0@1#2 (?)
+
+State 62 file <builtin-library>-pthread_create line 44 function pthread_create thread 0
+----------------------------------------------------
+  task[0]=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 66 file <builtin-library>-pthread_create line 49 function pthread_create thread 0
+----------------------------------------------------
+  start_routine=start_routine!0@1#1 (?)
+
+State 67 file <builtin-library>-pthread_create line 49 function pthread_create thread 0
+----------------------------------------------------
+  arg=arg!0@1#1 (?)
+
+State 68 file <builtin-library>-pthread_create line 49 function pthread_create thread 0
+----------------------------------------------------
+  id=id!0@1#1 (?)
+
+State 73 file code.c line 99 function main thread 0
+----------------------------------------------------
+  thr_id=thr_id!0@1#2 (?)
+
+State 77 file code.c line 105 function main thread 0
+----------------------------------------------------
+  id=id!0@1#1 (?)
+
+State 78 file code.c line 105 function main thread 0
+----------------------------------------------------
+  test=test!0@1#1 (?)
+
+State 79 file code.c line 105 function main thread 0
+----------------------------------------------------
+  prev=prev!0@1#1 (?)
+
+State 85 file lib_manual.h line 41 function EE_assert thread 0
+----------------------------------------------------
+  EE_assertions[1]=1 (0000000000000001)
+
+State 91 file lib_manual.h line 13 function EE_hal_enableIRQ thread 0
+----------------------------------------------------
+  enable_interrupt=enable_interrupt#2 (?)
+
+State 97 file code.c line 110 function main thread 0
+----------------------------------------------------
+  id=id!0@2#1 (?)
+
+State 99 file code.c line 110 function main thread 0
+----------------------------------------------------
+  test=1 (00000000000000000000000000000001)
+
+State 100 file code.c line 110 function main thread 0
+----------------------------------------------------
+  prev=prev!0@2#1 (?)
+
+State 108 file lib_manual.h line 36 function EE_assert thread 0
+----------------------------------------------------
+  EE_assertions[4]=2 (0000000000000010)
+
+State 113 file code.c line 111 function main thread 0
+----------------------------------------------------
+  id=id!0@1#1 (?)
+
+State 114 file code.c line 111 function main thread 0
+----------------------------------------------------
+  begin=begin!0@1#1 (?)
+
+State 115 file code.c line 111 function main thread 0
+----------------------------------------------------
+  end=end!0@1#1 (?)
+
+State 116 file lib_manual.h line 55 function EE_assert_range thread 0
+----------------------------------------------------
+  i=i!0@1#1 (?)
+
+State 117 file lib_manual.h line 57 function EE_assert_range thread 0
+----------------------------------------------------
+  i=i!0@1#2 (?)
+
+State 120 file lib_manual.h line 57 function EE_assert_range thread 0
+----------------------------------------------------
+  i=i!0@1#3 (?)
+
+State 126 file lib_manual.h line 59 function EE_assert_range thread 0
+----------------------------------------------------
+  EE_assertions[0]=2 (0000000000000010)
+
+State 129 file code.c line 112 function main thread 0
+----------------------------------------------------
+  return_value_EE_assert_last$1=return_value_EE_assert_last$1!0@1#1 (?)
+
+State 135 file code.c line 112 function main thread 0
+----------------------------------------------------
+  return_value_EE_assert_last$1=2 (0000000000000010)
+
+State 136 file code.c line 112 function main thread 0
+----------------------------------------------------
+  main$$1$$result=2 (00000000000000000000000000000010)
+
+State 138 file code.c line 117 function main thread 0
+----------------------------------------------------
+  i=i!0@1#1 (?)
+
+State 139 file code.c line 118 function main thread 0
+----------------------------------------------------
+  i=i!0@1#2 (?)
+ASSERT 0 : 0
+
+
+State 142 file code.c line 118 function main thread 0
+----------------------------------------------------
+  i=i!0@1#3 (?)
+ASSERT 1 : 0
+
+
+State 146 file code.c line 118 function main thread 0
+----------------------------------------------------
+  i=i!0@1#4 (?)
+
+Violated property:
+  file code.c line 118 function main
+  unwinding assertion loop 1
+
+
+State 149 file <builtin-library>-pthread_create line 19 function __actual_thread_spawn thread 1
+----------------------------------------------------
+  __CPROVER_thread_id=__CPROVER_thread_id!1#2 (?)
+
+State 153 file <builtin-library>-pthread_create line 20 function __actual_thread_spawn thread 1
+----------------------------------------------------
+  arg=arg!1@1#1 (?)
+
+State 154 file code.c line 42 function EE_pit_handler thread 1
+----------------------------------------------------
+  task=task!1@1#1 (?)
+
+State 155 file code.c line 43 function EE_pit_handler thread 1
+----------------------------------------------------
+  thr_id=thr_id!1@1#1 (?)
+
+State 156 file code.c line 44 function EE_pit_handler thread 1
+----------------------------------------------------
+  status=status!1@1#1 (?)
+
+State 157 file code.c line 45 function EE_pit_handler thread 1
+----------------------------------------------------
+  a=a!1@1#1 (?)
+
+State 158 file code.c line 45 function EE_pit_handler thread 1
+----------------------------------------------------
+  a=a!1@1#2 (?)
+
+State 159 file code.c line 46 function EE_pit_handler thread 1
+----------------------------------------------------
+  EE_pit_handler$$1$$result=result!1@1#1 (?)
+
+State 160 file code.c line 46 function EE_pit_handler thread 1
+----------------------------------------------------
+  EE_pit_handler$$1$$result=result!1@1#2 (?)
+
+State 163 file code.c line 49 function EE_pit_handler thread 1
+----------------------------------------------------
+  isr1_fired=1 (00000000000000000000000000000001)
+Timer: (cnt: 0) - Activating Task1
+
+
+State 170 file code.c line 54 function EE_pit_handler thread 1
+----------------------------------------------------
+  id=id!1@1#1 (?)
+
+State 172 file code.c line 54 function EE_pit_handler thread 1
+----------------------------------------------------
+  test=1 (00000000000000000000000000000001)
+
+State 173 file code.c line 54 function EE_pit_handler thread 1
+----------------------------------------------------
+  prev=prev!1@1#1 (?)
+
+State 181 file lib_manual.h line 36 function EE_assert thread 1
+----------------------------------------------------
+  EE_assertions[2]=2 (0000000000000010)
+
+State 190 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  thread=thread!1@1#1 (?)
+
+State 191 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  attr=attr!1@1#1 (?)
+
+State 192 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  start_routine=start_routine!1@1#1 (?)
+
+State 193 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  arg=arg!1@1#1 (?)
+
+State 194 file <builtin-library>-pthread_create line 33 function pthread_create thread 1
+----------------------------------------------------
+  this_thread_id=this_thread_id!1@1#1 (?)
+
+State 196 file <builtin-library>-pthread_create line 35 function pthread_create thread 1
+----------------------------------------------------
+  __CPROVER_next_thread_id=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 197 file <builtin-library>-pthread_create line 35 function pthread_create thread 1
+----------------------------------------------------
+  this_thread_id=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 201 file <builtin-library>-pthread_create line 44 function pthread_create thread 1
+----------------------------------------------------
+  task=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 205 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  start_routine=start_routine!1@1#1 (?)
+
+State 206 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  arg=arg!1@1#1 (?)
+
+State 207 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  id=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 212 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  thr_id=thr_id!1@1#2 (?)
+
+State 216 file code.c line 64 function EE_pit_handler thread 1
+----------------------------------------------------
+  thread=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 217 file code.c line 64 function EE_pit_handler thread 1
+----------------------------------------------------
+  value_ptr=value_ptr!1@1#1 (?)
+Timer - EOI
+
+
+State 227 file code.c line 66 function EE_pit_handler thread 1
+----------------------------------------------------
+  seconds=seconds!1@1#1 (?)
+
+State 228 file <builtin-library>-sleep line 5 function sleep thread 1
+----------------------------------------------------
+  remaining_time=remaining_time!1@1#1 (?)
+
+State 235 file code.c line 49 function EE_pit_handler thread 1
+----------------------------------------------------
+  isr1_fired=2 (00000000000000000000000000000010)
+Timer: (cnt: 0) - Activating Task1
+
+
+State 246 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  thread=thread!1@2#1 (?)
+
+State 247 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  attr=attr!1@2#1 (?)
+
+State 248 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  start_routine=start_routine!1@2#1 (?)
+
+State 249 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  arg=arg!1@2#1 (?)
+
+State 250 file <builtin-library>-pthread_create line 33 function pthread_create thread 1
+----------------------------------------------------
+  this_thread_id=this_thread_id!1@2#1 (?)
+
+State 252 file <builtin-library>-pthread_create line 35 function pthread_create thread 1
+----------------------------------------------------
+  __CPROVER_next_thread_id=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 253 file <builtin-library>-pthread_create line 35 function pthread_create thread 1
+----------------------------------------------------
+  this_thread_id=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 257 file <builtin-library>-pthread_create line 44 function pthread_create thread 1
+----------------------------------------------------
+  task=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 261 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  start_routine=start_routine!1@2#1 (?)
+
+State 262 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  arg=arg!1@2#1 (?)
+
+State 263 file <builtin-library>-pthread_create line 49 function pthread_create thread 1
+----------------------------------------------------
+  id=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 268 file code.c line 59 function EE_pit_handler thread 1
+----------------------------------------------------
+  thr_id=thr_id!1@1#3 (?)
+
+State 272 file code.c line 64 function EE_pit_handler thread 1
+----------------------------------------------------
+  thread=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 273 file code.c line 64 function EE_pit_handler thread 1
+----------------------------------------------------
+  value_ptr=value_ptr!1@2#1 (?)
+Timer - EOI
+
+
+State 283 file code.c line 66 function EE_pit_handler thread 1
+----------------------------------------------------
+  seconds=seconds!1@2#1 (?)
+
+State 284 file <builtin-library>-sleep line 5 function sleep thread 1
+----------------------------------------------------
+  remaining_time=remaining_time!1@2#1 (?)
+
+Violated property:
+  file code.c line 48 function EE_pit_handler
+  unwinding assertion loop 0
+
+
+State 290 file <builtin-library>-pthread_create line 19 function __actual_thread_spawn thread 2
+----------------------------------------------------
+  __CPROVER_thread_id=__CPROVER_thread_id!2#2 (?)
+
+State 294 file <builtin-library>-pthread_create line 20 function __actual_thread_spawn thread 2
+----------------------------------------------------
+  arg=arg!2@1#1 (?)
+
+State 297 file code.c line 72 function TASK1 thread 2
+----------------------------------------------------
+  task1_fired=1 (00000000000000000000000000000001)
+	Task1 activated. cnt: 0
+
+
+State 304 file code.c line 77 function TASK1 thread 2
+----------------------------------------------------
+  id=id!2@1#1 (?)
+
+State 306 file code.c line 77 function TASK1 thread 2
+----------------------------------------------------
+  test=1 (00000000000000000000000000000001)
+
+State 307 file code.c line 77 function TASK1 thread 2
+----------------------------------------------------
+  prev=prev!2@1#1 (?)
+
+State 315 file lib_manual.h line 36 function EE_assert thread 2
+----------------------------------------------------
+  EE_assertions[3]=2 (0000000000000010)
+
+State 320 file code.c line 80 function TASK1 thread 2
+----------------------------------------------------
+  task1_ended=1 (00000000000000000000000000000001)
+
+State 327 file <builtin-library>-pthread_create line 23 function __actual_thread_spawn thread 2
+----------------------------------------------------
+  __CPROVER_threads_exited[2]=TRUE (1)
+
+State 328 file <builtin-library>-pthread_create line 19 function __actual_thread_spawn thread 3
+----------------------------------------------------
+  __CPROVER_thread_id=__CPROVER_thread_id!3#2 (?)
+
+State 332 file <builtin-library>-pthread_create line 20 function __actual_thread_spawn thread 3
+----------------------------------------------------
+  arg=arg!3@1#1 (?)
+
+State 335 file code.c line 72 function TASK1 thread 3
+----------------------------------------------------
+  task1_fired=2 (00000000000000000000000000000010)
+	Task1 activated. cnt: 0
+
+
+State 342 file code.c line 80 function TASK1 thread 3
+----------------------------------------------------
+  task1_ended=2 (00000000000000000000000000000010)
+
+State 349 file <builtin-library>-pthread_create line 23 function __actual_thread_spawn thread 3
+----------------------------------------------------
+  __CPROVER_threads_exited[3]=TRUE (1)

@@ -1,0 +1,71 @@
+------------------------------------------------
+ltl p2 { [] !((task_state[2] == Running ) && (task_state[1] == Running))}
+
+---------------
+When limited to isr1_fired < 9 
+----------------------------
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 216 byte, depth reached 1052, errors: 0
+1.5875051e+08 states, stored
+2.0475737e+08 states, matched
+3.6350788e+08 transitions (= stored+matched)
+1.6092954e+08 atomic steps
+hash conflicts: 1.6457015e+08 (resolved)
+
+Stats on memory usage (in Megabytes):
+36940.694	equivalent memory usage for states (stored*(State-vector + overhead))
+32054.550	actual memory usage for states (compression: 86.77%)
+         	state-vector as stored = 184 byte + 28 byte overhead
+ 2048.000	memory used for hash table (-w28)
+    0.534	memory used for DFS stack (-m10000)
+   25.143	memory lost to fragmentation
+34077.987	total actual memory usage
+
+pan: elapsed time 495 seconds
+------------------------------------------------
+
+---------------
+----------------------------
+
+ltl p4 {[] ((task_state[1] == Running) -> <> (task_state[1] == Suspended)) }
+
+*** When limited to isr1_fired < 11 
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p4)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 216 byte, depth reached 873, errors: 1
+  2313204 states, stored (2.14669e+07 visited)
+ 33509171 states, matched
+ 54976054 transitions (= visited+matched)
+ 48282188 atomic steps
+hash conflicts:   1869797 (resolved)
+
+Stats on memory usage (in Megabytes):
+  538.275	equivalent memory usage for states (stored*(State-vector + overhead))
+  458.995	actual memory usage for states (compression: 85.27%)
+         	state-vector as stored = 180 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    5.341	memory used for DFS stack (-m99999)
+  591.934	total actual memory usage
+
+
+
+pan: elapsed time 62 seconds
+-----------------------------------------------
+

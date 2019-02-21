@@ -1,0 +1,64 @@
+2019.2.15.
+
+ltl p1 {[] !(task_state[2] == Running && task_state[1] == Running) }
+
+*** limits number of alarms < 11
+
+(Spin Version 6.4.8 -- 2 March 2018)
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 220 byte, depth reached 1967, errors: 0
+  9250876 states, stored
+ 10840686 states, matched
+ 20091562 transitions (= stored+matched)
+  3934709 atomic steps
+hash conflicts:   1732885 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 2187.936	equivalent memory usage for states (stored*(State-vector + overhead))
+ 1834.930	actual memory usage for states (compression: 83.87%)
+         	state-vector as stored = 180 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+    1.417	memory lost to fragmentation
+ 1962.128	total actual memory usage
+
+pan: elapsed time 23.4 seconds
+----------------------------------------------
+ltl p2 {[] (task_state[1] == Running -> <> (task_state[1] == Suspended))}
+
+(Spin Version 6.4.8 -- 2 March 2018)
+Warning: Search not completed
+	+ Partial Order Reduction
+
+Full statespace search for:
+	never claim         	+ (p2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness enabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 220 byte, depth reached 724, errors: 1
+    31132 states, stored (303644 visited)
+   450474 states, matched
+   754118 transitions (= visited+matched)
+   167718 atomic steps
+hash conflicts:       339 (resolved)
+
+Stats on memory usage (in Megabytes):
+    7.363	equivalent memory usage for states (stored*(State-vector + overhead))
+    6.571	actual memory usage for states (compression: 89.25%)
+         	state-vector as stored = 193 byte + 28 byte overhead
+  128.000	memory used for hash table (-w24)
+    0.534	memory used for DFS stack (-m10000)
+  135.077	total actual memory usage
+
+
+
+pan: elapsed time 0.91 seconds
+---------------------------------------------------------
